@@ -23,4 +23,11 @@ def index():
         obj['monthName']=date(year,month,day).strftime('%B')
     return jsonify(obj)
 
+@app.route('/',methods=['GET'])
+def welcome():
+    return render_template('welcome.html')
+
+
+# if __name__ == '__main__':
+#     app.run(debug=True)
  
